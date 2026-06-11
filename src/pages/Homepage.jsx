@@ -5,7 +5,7 @@ function Homepage() {
     return (
         <>
         <div className='hero-section'>
-            <h1 className='text-light'>Sciogliti dal terrore!</h1>
+            <h1 className='text-light text-center'>Sciogliti dal terrore!</h1>
         </div>
         </>
     )
