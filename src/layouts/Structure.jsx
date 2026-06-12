@@ -42,11 +42,16 @@ function Structure() {
                 <button className="btn btn-sm btn-dark text-white">Chi Siamo</button>
               </Link>
               <input
-                className="form-control form-control-sm border-0 text-white"
+                className="form-control form-control-sm border-0 text-dark"
                 type="search"
-                placeholder="Cerca..."
+                placeholder="We all melt down here..."
                 style={{ width: '200px' }}
               />
+              <button
+                className="btn btn-sm btn-dark text-white fw-bold border-light border-3"
+              >
+                Cerca
+              </button>
             </div>
 
           </div>

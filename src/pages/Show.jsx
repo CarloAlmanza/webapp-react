@@ -6,7 +6,11 @@ import { useContext } from 'react';
 function Show() {
     const { items, loading, error } = useContext(DataContext)
 
-    if (loading) return <p>Pagina in caricamento...</p>
+    if (loading) return (
+        <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
+        </div>
+    );
     if (error) return <Navigate to='/NotFound' />
 
     return (
