@@ -36,6 +36,17 @@ const api = {
         return data.results;
     },
 
+    async getReviewsByProductId(productId) {
+        const response = await fetch(`${API_BASE_URL}/reviews/${productId}`);
+        const data = await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        return data.results;
+    },
+
     async getReviewById(id) {
         const response = await fetch(`${API_BASE_URL}/reviews/${id}`);
         const data = await response.json();
