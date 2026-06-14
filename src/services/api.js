@@ -16,6 +16,14 @@ const api = {
         if (data.error) throw new Error(data.error);
         return data.results;
     },
+    
+    // 5 prodotti più recenti
+    async getFeaturedProducts() {
+        const response = await fetch(`${API_BASE_URL}/products/featured`);
+        const data = await response.json();
+        if (data.error) throw new Error(data.error);
+        return data.results;
+    },
 
     async getProductById(id) {
         const response = await fetch(`${API_BASE_URL}/products/${id}`);
@@ -36,19 +44,19 @@ const api = {
         return data.results;
     },
 
-async getReviewsByProductId(productId) {
-    const response = await fetch(`${API_BASE_URL}/reviews/${productId}`);
-    if (!response.ok) {
-        throw new Error(
-            `Errore HTTP ${response.status} nel recupero delle recensioni`
-        );
-    }
-    const data = await response.json();
-    if (data.error) {
-        throw new Error(data.error);
-    }
-    return data.results;
-},
+    async getReviewsByProductId(productId) {
+        const response = await fetch(`${API_BASE_URL}/reviews/${productId}`);
+        if (!response.ok) {
+            throw new Error(
+                `Errore HTTP ${response.status} nel recupero delle recensioni`
+            );
+        }
+        const data = await response.json();
+        if (data.error) {
+            throw new Error(data.error);
+        }
+        return data.results;
+    },
 
     async getReviewById(id) {
         const response = await fetch(`${API_BASE_URL}/reviews/${id}`);
