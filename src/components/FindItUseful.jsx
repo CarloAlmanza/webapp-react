@@ -2,19 +2,18 @@ import { useState } from "react";
 
 
 
-function FindItUseful({reviewLikes}) {
+function FindItUseful({ reviewLikes }) {
     const [findItUsefulCount, setFindItUsefulCount] = useState(reviewLikes);
     const [isLiked, setIsLiked] = useState(false); // toggle per il like
 
     const clickHandler = () => {
         if (isLiked === false) {
-        setFindItUsefulCount(reviewLikes + 1);
-        setIsLiked(true)
-    } else if (isLiked === true) {
-        setFindItUsefulCount(reviewLikes);
-        setIsLiked(false)
-    } 
-          
+            setFindItUsefulCount(reviewLikes + 1);
+            setIsLiked(true)
+        } else if (isLiked === true) {
+            setFindItUsefulCount(reviewLikes);
+            setIsLiked(false)
+        }
     };
 
     return (
@@ -25,8 +24,7 @@ function FindItUseful({reviewLikes}) {
             <p className="date-text small text-black-50 py-1 m">{findItUsefulCount} {findItUsefulCount > 1 || findItUsefulCount === 0
                 ? "persone l'hanno trovata utile"
                 : "persona l'ha trovata utile"}</p>
-
-        </div >
+        </div>
     )
 }
 export default FindItUseful;
