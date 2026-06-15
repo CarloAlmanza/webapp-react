@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../services/api";
 import ReviewForm from "./RewiewForm";
+import { formatDate } from "../utils/fucntions.js";
+import FindItUseful from "./FindItUseful.jsx";
 
 function ReviewsList({ productId }) {
     const [reviews, setReviews] = useState([]);
@@ -137,7 +139,7 @@ function ReviewsList({ productId }) {
                                 </span>
                             </div>
                             <p className="text-secondary">
-                                {reviews.length} valutazioni globali
+                                {reviews.length} valutazioni
                             </p>
                             {ratingSummary.map(item => (
                                 <button
@@ -236,7 +238,13 @@ function ReviewsList({ productId }) {
                                             {review.author_name}
                                         </strong>
                                     </p>
+                                    
+                                    <div className="d-flex justify-content-end px-2">
+                                        <p className="date-text small fst-italic text-black-50 py-1 m">Pubblicato il {formatDate(review.submission_date)}</p>
+                                    </div>
+                                    <FindItUseful reviewLikes={review.find_it_useful}/>
                                 </div>
+
                             </div>
                         ))
                     )}
