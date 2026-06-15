@@ -190,6 +190,10 @@ footer {
   color: #ec307d;
 }
 
+.like-btn {
+  cursor: pointer;
+}
+
 .selectcategories {
   display: flex;
   flex-direction: row;
