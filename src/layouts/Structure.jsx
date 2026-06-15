@@ -94,7 +94,7 @@ function Structure() {
     </ul>
 
     <div className="text-secondary small">
-      <span>© {new Date().getFullYear()} iScream.</span>
+      <span>© {new Date().getFullYear()} iScream</span>
     </div>
 
   </div>
