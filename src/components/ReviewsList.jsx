@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../services/api";
+import { formatDate } from "../utils/fucntions.js";
 
 function ReviewsList({ productId }) {
     const [reviews, setReviews] = useState([]);
@@ -216,6 +217,7 @@ function ReviewsList({ productId }) {
                                             {review.author_name}
                                         </strong>
                                     </p>
+                                    <p className="date-text small fst-italic text-black-50 py-1">Pubblicato il {formatDate(review.submission_date)}</p>
                                 </div>
                             </div>
                         ))
