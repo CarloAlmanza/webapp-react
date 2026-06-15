@@ -212,7 +212,7 @@ footer {
 }
 
 .featured-card {
-  width: 250px;
+  width: 17rem;
 }
 
 .featured-card-title {
@@ -278,5 +278,9 @@ footer {
 }
 
 .product-card .card-img-top {
+  height: 290px;
+}
+
+.featured-card .card-img-top {
   height: 290px;
 }

@@ -47,8 +47,8 @@ function Homepage() {
                                     <div className="card-body d-flex flex-column">
                                         <h5 className="card-title featured-card-title">{product.name}</h5>
                                         <p className="card-text card-text-clamp">{product.short_description}</p>
-                                        <Link to={`/ProductDetail/${product.id}`} className="btn btn-dark mt-auto">
-                                            Dettagli
+                                        <Link to={`/ProductDetail/${product.id}`} className="text-dark text-decoration-none mt-auto align-self-end" aria-label="Dettagli">
+                                            <i className="bi bi-arrow-right-circle-fill fs-2"></i>
                                         </Link>
                                     </div>
                                 </div>
