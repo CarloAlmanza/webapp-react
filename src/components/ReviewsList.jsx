@@ -217,8 +217,22 @@ function ReviewsList({ productId }) {
                                             {review.author_name}
                                         </strong>
                                     </p>
-                                    <p className="date-text small fst-italic text-black-50 py-1">Pubblicato il {formatDate(review.submission_date)}</p>
+
+                                    <div className="d-flex justify-content-end px-2">
+                                        <p className="date-text small fst-italic text-black-50 py-1 m">Pubblicato il {formatDate(review.submission_date)}</p>
+                                    </div>
+                                    <div className="d-flex justify-content-start">
+                                        <span className="like-btn spx-2">
+                                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                                        </span>
+                                        <p className="date-text small text-black-50 py-1 m">{Number(review.find_it_useful)} {Number(review.find_it_useful) > 1
+                                            ? "persone l'hanno trovata utile"
+                                            : "persona l'ha trovata utile"}</p>
+                                        
+                                    </div>
+                                       
                                 </div>
+
                             </div>
                         ))
                     )}
