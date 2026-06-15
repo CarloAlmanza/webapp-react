@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import api from "../services/api";
 import { formatDate } from "../utils/fucntions.js";
+import FindItUseful from "./FindItUseful.jsx";
 
 function ReviewsList({ productId }) {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPage, setCurrentPage] = useState(0);
-    const [ratingFilter, setRatingFilter] = useState(null)
+    const [ratingFilter, setRatingFilter] = useState(null);
     const reviewsPerPage = 3;
     useEffect(() => {
         const fetchReviews = async () => {
@@ -217,19 +218,11 @@ function ReviewsList({ productId }) {
                                             {review.author_name}
                                         </strong>
                                     </p>
-
+                                    
                                     <div className="d-flex justify-content-end px-2">
                                         <p className="date-text small fst-italic text-black-50 py-1 m">Pubblicato il {formatDate(review.submission_date)}</p>
                                     </div>
-                                    <div className="d-flex justify-content-start">
-                                        <span className="like-btn spx-2">
-                                            <i class="bi bi-hand-thumbs-up-fill"></i>
-                                        </span>
-                                        <p className="date-text small text-black-50 py-1 m">{Number(review.find_it_useful)} {Number(review.find_it_useful) > 1 || Number(review.find_it_useful)=== 0
-                                            ? "persone l'hanno trovata utile"
-                                            : "persona l'ha trovata utile"}</p>
-                                        
-                                    </div>
+                                    <FindItUseful reviewLikes={review.find_it_useful}/>
                                 </div>
 
                             </div>
