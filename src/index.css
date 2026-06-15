@@ -69,24 +69,16 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.hero-section {
   position: relative;
+  padding: 0;
+  margin: 0;
 }
-
+/*
 .slogan {
-  position: absolute;
-  top: 1.6rem;
-  left: 49%;
-  width: 24%;
-  transform: translateX(-50%) rotate(-8deg);
-  z-index: 2;
+  width: 100%;
+  transform: rotate(-8deg);
 }
-
+*/
 /**/
 /*NotFound*/
 
@@ -214,9 +206,8 @@ footer {
 
 /* Sezione prodotti in evidenza - homepage */
 .featured-section {
-  position: relative;
-  z-index: 1;
-  margin-top: -16.4rem; /* valore di partenza, da aggiustare */
+  width: 100%;
+  padding: 3rem 1rem 2rem;
 }
 
 .featured-card {
@@ -260,7 +251,7 @@ footer {
     padding-top: 12rem;
   }
 }
-
+/*
 @media (max-width: 1024px) {
   .slogan {
     width: 50%;
@@ -272,7 +263,7 @@ footer {
     width: 70%;
   }
 }
-
+*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -286,10 +277,11 @@ footer {
 
 .fade-in-content {
   animation: fadeInUp 0.80s ease-out;
+}
+
 /*product detail*/
 .rating-star{
   color: #ec307d;
-}
 }
 
 .rating-bar{
@@ -313,8 +305,6 @@ footer {
 /* Hero banner homepage */
 .hero-banner {
   width: 100%;
-  max-height: 55vh;
-  object-fit: cover;
+  height: auto;
   display: block;
-  border-radius: 1%;
 }
