@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import pennywise from '../img/pennywise-newsletter.png';
 
+let alreadyShown = false;
+
 function NewsletterModal() {
     const [showModal, setShowModal] = useState(false);
     const [email, setEmail] = useState('');
 
     useEffect(() => {
-        const hasSubscribed = localStorage.getItem('newsletterSubscribed');
-        if (!hasSubscribed) {
+        const alreadyShown = sessionStorage.getItem('newsletterShown');
+        if (!alreadyShown) {
+            sessionStorage.setItem('newsletterShown', 'true');
             setShowModal(true);
         }
     }, []);
@@ -48,5 +51,7 @@ function NewsletterModal() {
         </div>
     );
 }
+
+
 
 export default NewsletterModal;
