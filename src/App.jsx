@@ -12,6 +12,7 @@ import Structure from './layouts/Structure';
 import ProductDetail from './pages/ProductDetail';
 import NotFound from './pages/NotFound';
 import WhoWeAre from './pages/WhoWeAre';
+import Favorites from './pages/Favorites';
 import { DataProvider } from './context/DataContext';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -29,6 +30,7 @@ function App() {
               <Route path='/Homepage' element={<Homepage />} />
               <Route path='/Show' element={<Show />} />
               <Route path='/WhoWeAre' element={<WhoWeAre />} />
+              <Route path='/Favorites' element={<Favorites />} />
               <Route path='/ProductDetail/:id' element={<ProductDetail />} />
               <Route path='/NotFound' element={<NotFound />} />
               <Route path="*" element={<NotFound />} />

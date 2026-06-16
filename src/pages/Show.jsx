@@ -135,7 +135,7 @@ function Show() {
                         {displayedItems.map(item => (
                             <ProductCardShow item={item} key={item.id}/>
                         ))}
-                        <div className="card m-3" style={{ width: "18rem" }}>
+                        {/*<div className="card m-3" style={{ width: "18rem" }}>
 
                             <div className="card-body d-flex justify-content-center align-items-center">
                                 <button className="btn btn-dark" onClick={() => setShowModal(true)}>
@@ -143,15 +143,16 @@ function Show() {
                                     <i className="bi bi-plus-circle-fill mx-2"></i>
                                 </button>
                             </div>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>
+            {/* 
             <FormAddCard
                 show={showModal}
                 onClose={() => setShowModal(false)}
                 onSubmit={handleSubmitProduct}
-            />
+            />*/}
         </>
     )
 };
