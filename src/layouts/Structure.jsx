@@ -56,6 +56,9 @@ function Structure() {
               <li className="nav-item">
                 <Link to="/WhoWeAre" className="btn btn-sm btn-dark text-white" onClick={closeMenu}>Chi Siamo</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/Favorites" className="btn btn-sm btn-dark text-white" onClick={closeMenu}><i class="bi bi-heart-fill"></i></Link>
+              </li>
               <li className="nav-item d-flex gap-2">
                 <input
                   className="form-control form-control-sm border-0 text-dark"
